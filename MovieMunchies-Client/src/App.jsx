@@ -3,7 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeLayout from "./components/HomeLayout";
 import { Route, Routes } from "react-router";
-import PreLoaderComponent from "./components/PreLoaderComponent";
+import PreLoaderComponent from "./components/preloader/PreLoaderComponent";
 
 function App() {
   return (
