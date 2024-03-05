@@ -1,9 +1,15 @@
 import React from "react";
+import NavbarLayout from "./Navbar Component/NavbarLayout";
 
 const HomeLayout = () => {
   return (
     <div>
-      <h1 className="text-center h1">Welcome Movie Munchies !</h1>
+      <div className="container-fluid" fixed>
+        <NavbarLayout />
+      </div>
+      <div className="container mt-5">
+        
+      </div>
     </div>
   );
 };

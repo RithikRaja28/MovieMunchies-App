@@ -1,0 +1,15 @@
+@media screen {
+  @media (max-width: 1024px) {
+    .admin-logout {
+      margin-top: 150%;
+    }
+  }
+  @media (min-width: 1025px) {
+    .admin-logout {
+      margin-top: 80%;
+    }
+  }
+}
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
