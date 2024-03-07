@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router";
 const NavbarLayout = () => {
+  const navigate = useNavigate();
   return (
     <>
       <nav
@@ -80,7 +82,7 @@ const NavbarLayout = () => {
                 </li>
               </ul>
               <div className="text-center">
-                <button className="bg-danger btn rounded-pill admin-logout">
+                <button onClick={()=>{navigate("/")}} className="bg-danger btn rounded-pill admin-logout">
                   Admin Logout
                 </button>
               </div>
