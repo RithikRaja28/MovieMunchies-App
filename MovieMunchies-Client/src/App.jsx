@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HomeLayout from "./components/HomeLayout";
+import HomeLayout from "./components/HomeComponent/HomeLayout";
 import { Route, Routes } from "react-router";
 import PreLoaderComponent from "./components/preloader/PreLoaderComponent";
 import LoginLayout from "./components/Login Component/LoginLayout";

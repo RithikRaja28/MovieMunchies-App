@@ -61,8 +61,8 @@
   border-radius: 6px;
   border: 2px solid #fff;
   background: rgba(117, 220, 213, 0.486);
-  box-shadow: 0px 0px 1px 3px #648d8c inset, 0px 4px 4px 0px #181a6040;
-  text-shadow: 0px 1px 4px rgb(243, 243, 243);
+  box-shadow: 0px 0px 1px 3px #648d8cb2 inset, 0px 4px 4px 0px #181a6040;
+  text-shadow: 0px 1px 4px rgba(243, 243, 243, 0.603);
 }
 
 .form-content:focus-visible {

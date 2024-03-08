@@ -7,8 +7,10 @@ const NavbarLayout = () => {
     <>
       <nav
         class="navbar fixed-top"
-        style={{ background: "#000" }}
         data-bs-theme="dark"
+        style={{
+          background: "#000",
+        }}
       >
         <div class="container-fluid">
           <img
@@ -19,6 +21,7 @@ const NavbarLayout = () => {
           <a class="navbar-brand" href="#">
             Movie Munchies
           </a>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -29,6 +32,7 @@ const NavbarLayout = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div
             class="offcanvas offcanvas-end"
             tabindex="-1"
@@ -82,7 +86,12 @@ const NavbarLayout = () => {
                 </li>
               </ul>
               <div className="text-center">
-                <button onClick={()=>{navigate("/")}} className="bg-danger btn rounded-pill admin-logout">
+                <button
+                  onClick={() => {
+                    navigate("/");
+                  }}
+                  className="bg-danger btn rounded-pill admin-logout"
+                >
                   Admin Logout
                 </button>
               </div>
