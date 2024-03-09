@@ -10,7 +10,7 @@ const HomeLayout = () => {
       <div className="container-fluid p-3">
         <div className="row">
           <div className="col text-end p-4 ms-3 mt-4">
-            <button>d</button>
+            <button></button>
           </div>
         </div>
       </div>
