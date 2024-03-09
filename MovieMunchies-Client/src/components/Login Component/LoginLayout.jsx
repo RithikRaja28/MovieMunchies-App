@@ -7,6 +7,7 @@ const LoginLayout = () => {
   return (
     <div className="authpage">
       <div id="Container">
+        <img src="popcorn_image.png" width={50} />
         <form class="form">
           <br />
           <input class="form-content" type="text" placeholder="Username" />
