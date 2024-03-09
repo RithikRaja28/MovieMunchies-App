@@ -8,9 +8,6 @@ const LoginLayout = () => {
     <div className="authpage">
       <div id="Container">
         <form class="form">
-          <div id="login-lable">
-            <div className="h2">Login</div>
-          </div>
           <br />
           <input class="form-content" type="text" placeholder="Username" />
           <input class="form-content" type="password" placeholder="Password" />
