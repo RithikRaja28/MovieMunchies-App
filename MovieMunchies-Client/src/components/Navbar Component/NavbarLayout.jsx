@@ -65,14 +65,25 @@ const NavbarLayout = () => {
               </form>
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
+                  <button
+                    class="nav-link"
+                    aria-current="page"
+                    onClick={() => {
+                      navigate("/home");
+                    }}
+                  >
                     Home
-                  </a>
+                  </button>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <button
+                    onClick={() => {
+                      navigate("/admin");
+                    }}
+                    class="nav-link"
+                  >
                     Admin
-                  </a>
+                  </button>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">
