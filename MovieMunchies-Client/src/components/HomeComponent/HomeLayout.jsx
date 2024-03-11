@@ -44,6 +44,7 @@ const HomeLayout = () => {
       </div>
       <div className="container-fluid">
         <div class="row">
+          <h6 className="text-light mb-3 mt-3 h6">Recommed Food 🍿: </h6>
           <div class="col-sm-3">
             <div class="card text-light text-center">
               <div class="card-body">
@@ -55,9 +56,9 @@ const HomeLayout = () => {
                 <h5 class="card-title m-2">Beverages</h5>
                 <p class="card-text">3 Combos*</p>
                 <div className="text-end">
-                  <a href="#" class="btn btn-danger">
+                  <button href="#" class="btn btn-danger">
                     Add
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -73,9 +74,9 @@ const HomeLayout = () => {
                 <h5 class="card-title m-2">Popcorn + Coke</h5>
                 <p class="card-text">Special offer Available *</p>
                 <div className="text-end">
-                  <a href="#" class="btn btn-danger">
+                  <button href="#" class="btn btn-danger">
                     Add
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -91,9 +92,9 @@ const HomeLayout = () => {
                 <h5 class="card-title">Chilli Sauce - Samosa</h5>
                 <p class="card-text mt-3">9.pcs of Samosa + Chilli Sause</p>
                 <div className="text-end">
-                  <a href="#" class="btn btn-danger">
+                  <button href="#" class="btn btn-danger">
                     Add
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -109,9 +110,9 @@ const HomeLayout = () => {
                 <h5 class="card-title m-2">Chicken Burger + French Fries</h5>
                 <p class="card-text mt-2">[Chicken , Mutton] Burger *</p>
                 <div className="text-end">
-                  <a href="#" class="btn btn-danger">
+                  <button href="#" class="btn btn-danger">
                     Add
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -127,9 +128,9 @@ const HomeLayout = () => {
                 <h5 class="card-title m-2">Kids Pack Combo</h5>
                 <p class="card-text mt-3">Ice Cola + Candies + Sweet Popcorn</p>
                 <div className="text-end">
-                  <a href="#" class="btn btn-danger">
+                  <button href="#" class="btn btn-danger">
                     Add
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -147,9 +148,119 @@ const HomeLayout = () => {
                   Indian Style Mixture [Spicy , Sour]
                 </p>
                 <div className="text-end">
-                  <a href="#" class="btn btn-danger">
+                  <button href="#" class="btn btn-danger">
                     Add
-                  </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mt-3">
+            <div class="card text-light text-center">
+              <div class="card-body">
+                <img
+                  src="easy-vegan-momos.jpg"
+                  className="card-img-top itemimage"
+                  alt=""
+                />
+                <h5 class="card-title m-2">Vegan Momos</h5>
+                <p class="card-text mt-3">Veggie Vegan momos</p>
+                <div className="text-end">
+                  <button href="#" class="btn btn-danger">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mt-3">
+            <div class="card text-light text-center">
+              <div class="card-body">
+                <img
+                  src="pani-puri.jpg"
+                  className="card-img-top itemimage"
+                  alt=""
+                />
+                <h5 class="card-title m-2">Paani Puri - Chat</h5>
+                <p class="card-text mt-3">[Spicy,Sweet] Paani + Cruncy puri</p>
+                <div className="text-end">
+                  <button href="#" class="btn btn-danger">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mt-3">
+            <div class="card text-light text-center">
+              <div class="card-body">
+                <img
+                  src="ice-cream.jpg"
+                  className="card-img-top itemimage"
+                  alt=""
+                />
+                <h5 class="card-title m-2">Choclate Icecream</h5>
+                <p class="card-text mt-3">Special Combo Available *</p>
+                <div className="text-end">
+                  <button href="#" class="btn btn-danger">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mt-3">
+            <div class="card text-light text-center">
+              <div class="card-body">
+                <img
+                  src="browie-icecream.jpg"
+                  className="card-img-top itemimage"
+                  alt=""
+                />
+                <h5 class="card-title m-2">Choci Brownie + Vanilla IceCream</h5>
+                <p class="card-text mt-3">Special Combo Available*</p>
+                <div className="text-end">
+                  <button href="#" class="btn btn-danger">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mt-3">
+            <div class="card text-light text-center">
+              <div class="card-body">
+                <img
+                  src="vanilla-icecream.jpg"
+                  className="card-img-top itemimage"
+                  alt=""
+                />
+                <h5 class="card-title m-2">
+                  Chocolate Drizzle + Vanilla IceCream
+                </h5>
+                <p class="card-text mt-3">Special Combo Available*</p>
+                <div className="text-end">
+                  <button href="#" class="btn btn-danger">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 mt-3">
+            <div class="card text-light text-center">
+              <div class="card-body">
+                <img
+                  src="Chocolate-sandwich-cupcakes.jpg"
+                  className="card-img-top itemimage"
+                  alt=""
+                />
+                <h5 class="card-title m-2">Oreo + Strawberry CupCakes</h5>
+                <p class="card-text mt-3">Special Combo Available*</p>
+                <div className="text-end">
+                  <button href="#" class="btn btn-danger">
+                    Add
+                  </button>
                 </div>
               </div>
             </div>
