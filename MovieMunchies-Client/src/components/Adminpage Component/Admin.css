@@ -124,3 +124,9 @@
   opacity: 1;
   transform: translate(-50%, -130%);
 }
+
+.Admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
