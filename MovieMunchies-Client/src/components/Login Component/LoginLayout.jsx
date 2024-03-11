@@ -8,13 +8,17 @@ const LoginLayout = () => {
     <div className="authpage">
       <div id="Container">
         <img src="popcorn_image.png" width={50} />
-        <span className="text-light mt-2">Welcome to Movie Munchies</span>
+        <span className="text-light logintext">Welcome to Movie Munchies</span>
         <form class="form">
           <br />
-          <input class="form-content" type="text" placeholder="Username" />
+          <input
+            class="form-content text-dark"
+            type="text"
+            placeholder="Username"
+          />
           <input class="form-content" type="password" placeholder="Password" />
           <button className="btn mt-2" onClick={() => navigate("/home")}>
-            Continue
+            Login
           </button>
         </form>
 

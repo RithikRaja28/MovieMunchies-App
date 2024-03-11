@@ -3,10 +3,17 @@
     .authpage {
       margin-top: 35%;
     }
+    .logintext {
+      margin-top: 5%;
+      font-size: larger;
+    }
   }
   @media (min-width: 1025px) {
     .authpage {
       margin-top: 5%;
+    }
+    .logintext {
+      margin-top: 1%;
     }
   }
 }
@@ -85,20 +92,13 @@
 
 .form button {
   cursor: pointer;
-  height: 3.5rem;
+  height: 2 0.5rem;
   padding: 0%;
   color: white;
-  font-size: 1.5em;
-  letter-spacing: 0.3rem;
+  font-size: 1.8em;
+  letter-spacing: 0.2rem;
   border: 2px solid white;
   background: linear-gradient(144deg, #9c11ffce, #2000eeb6 50%, #15efffbb);
-}
-
-.form button:hover {
-  position: relative;
-  bottom: 4px;
-  background: linear-gradient(144deg, #9c11ff, #2000ee 50%, #15fff3);
-  box-shadow: 0px 0px 2px 2px #ffffff;
 }
 
 @keyframes float {

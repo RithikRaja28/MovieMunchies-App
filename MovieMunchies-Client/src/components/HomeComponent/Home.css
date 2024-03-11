@@ -8,3 +8,32 @@
   background-color: lightcoral;
   margin: 4px;
 }
+
+.searchinput {
+  width: 450px;
+  margin-right: 10px;
+}
+
+@media screen {
+  @media (max-width: 1024px) {
+    .searchinput {
+      width: 450px;
+      margin-right: 10px;
+    }
+    .itemimage {
+      width: 145px;
+      height: 140px;
+    }
+  }
+  @media (min-width: 1025px) {
+    .searchinput {
+      width: 800px;
+      margin-right: 10px;
+      margin-left: 150px;
+    }
+    .itemimage {
+      width: 300px;
+      height: 250px;
+    }
+  }
+}
