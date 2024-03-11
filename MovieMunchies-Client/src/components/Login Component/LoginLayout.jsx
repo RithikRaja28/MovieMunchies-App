@@ -8,6 +8,7 @@ const LoginLayout = () => {
     <div className="authpage">
       <div id="Container">
         <img src="popcorn_image.png" width={50} />
+        <span className="text-light mt-2">Welcome to Movie Munchies</span>
         <form class="form">
           <br />
           <input class="form-content" type="text" placeholder="Username" />
