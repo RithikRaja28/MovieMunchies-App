@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import "./Login.css";
-
+import axios from "axios";
 const LoginLayout = () => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:3001/MM-login", { email, password })
+      .then((result) => {
+        console.log(result);
+        if (result.data.success) {
+          alert(result.data.message);
+          navigate("/home");
+        }else{
+          alert(result.data.message);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   const navigate = useNavigate();
   return (
     <div className="authpage">
@@ -11,15 +30,25 @@ const LoginLayout = () => {
         <span className="text-light logintext">
           Welcome to Movie Munchies - ADMIN
         </span>
-        <form class="form">
+        <form class="form" onSubmit={handleSubmit}>
           <br />
           <input
             class="form-content text-dark"
-            type="text"
-            placeholder="Username"
+            type="email"
+            placeholder="Email"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
-          <input class="form-content" type="password" placeholder="Password" />
-          <button className="btn mt-2" onClick={() => navigate("/home")}>
+          <input
+            class="form-content"
+            type="password"
+            placeholder="Password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
+          <button type="submit" className="btn mt-2">
             Login
           </button>
         </form>
