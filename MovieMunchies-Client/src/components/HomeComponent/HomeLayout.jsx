@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import NavbarLayout from "../Navbar Component/NavbarLayout";
 import "./Home.css";
 const HomeLayout = () => {
+  const [cartCount,setCartCount] = useState(0);
   const [itemCounts, setItemCounts] = useState({
     beverages: 0,
     popcornCoke: 0,
@@ -58,7 +59,7 @@ const HomeLayout = () => {
                 width={30}
                 title="Order items"
               />
-              <span class="badge items-cart">5</span>
+              <span class="badge items-cart">{cartCount}</span>
             </button>
           </div>
         </div>
@@ -79,6 +80,7 @@ const HomeLayout = () => {
                 <div className="text-end">
                   <span class="card-text h5 m-2">299/-</span>
                   <button
+                    
                     onClick={() => addItemEvent("beverages")}
                     class="btn btn-danger"
                   >
