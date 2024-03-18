@@ -1,0 +1,22 @@
+{
+  "short_name": "MovieMunchies App",
+  "name": "Movie Munchies App",
+  "icons": [
+    {
+      "src": "MovieMunchies-Client/public/popcorn_image.png.144x144.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "MovieMunchies-Client/public/popcorn_image.png.144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
