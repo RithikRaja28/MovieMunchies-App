@@ -1,5 +1,6 @@
 // Cart.jsx
 import React from "react";
+import CartLayout from "./CartLayout";
 
 const CartItem = ({ item, onRemove }) => {
   return (
@@ -33,9 +34,9 @@ const Cart = ({ items, onRemove }) => {
   return (
     <div>
       {items.map((item) => (
-        <CartItem key={item.id} item={item} onRemove={onRemove} />
+        <CartLayout key={item.id} item={item} onRemove={onRemove} />
       ))}
     </div>
   );
 };
-export default Cart;
+export default CartItem;

@@ -26,7 +26,7 @@ const HomeLayout = ({ addToCart }) => {
       [foodItem]: prevCounts[foodItem] + 1,
     }));
     setCartCount((prevCount) => prevCount + 1);
-     addToCart(foodItem);
+    addToCart(foodItem);
   };
   return (
     <div>
@@ -56,7 +56,12 @@ const HomeLayout = ({ addToCart }) => {
             </nav>
           </div>
           <div className="col text-end p-4 ms-3 mt-5">
-            <button className="cart-btn mt-3" onClick={()=>{navigate("/cart")}}>
+            <button
+              className="cart-btn mt-3"
+              onClick={() => {
+                navigate("/cart");
+              }}
+            >
               <img
                 src="trolley.png"
                 alt="cart"
