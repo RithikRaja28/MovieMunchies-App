@@ -9,7 +9,7 @@
       "purpose": "maskable any"
     },
     {
-      "src": "MovieMunchies-Client/public/icons/popcorn_144x144.png",
+      "src": "MovieMunchies-Client/public/icons/popcorn_image_144x144.png",
       "type": "image/png",
       "sizes": "144x144",
       "purpose": "any maskable"
