@@ -1,8 +1,12 @@
 .shake {
   animation: shake-animation 1s ease-in-out infinite;
-  
 }
-
+.sticky {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
 @keyframes shake-animation {
   0% {
     transform: translate(0);
@@ -62,6 +66,21 @@
   padding: 1.6rem;
   color: #fff;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.pack-container:hover {
+  border: 2px dashed red;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  z-index: 1;
+}
+.pack-container:active {
+  transform: translateY(-1px);
+}
+
+.pack-container:hover .button-container {
+  filter: brightness(1);
+  transition: all 0.3s ease;
 }
 
 .header {
