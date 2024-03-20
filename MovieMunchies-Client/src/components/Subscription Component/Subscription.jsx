@@ -1,13 +1,14 @@
 import React from "react";
 import NavbarLayout from "../Navbar Component/NavbarLayout";
-const CartLayout = () => {
+
+const Subscription = () => {
   return (
     <div>
-      <div className="container-fluid m-2">
+      <div>
         <NavbarLayout />
       </div>
     </div>
   );
 };
 
-export default CartLayout;
+export default Subscription;

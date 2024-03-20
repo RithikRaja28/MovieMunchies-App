@@ -91,9 +91,11 @@ const NavbarLayout = () => {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <button onClick={()=>{
+                    navigate("/MM-subscription");
+                  }}  class="nav-link" href="#">
                     Buy Product
-                  </a>
+                  </button>
                 </li>
               </ul>
               <div className="text-center">

@@ -8,6 +8,7 @@ import LoginLayout from "./components/Login Component/LoginLayout";
 import AdminLayout from "./components/Adminpage Component/AdminLayout";
 import Signup from "./Signup";
 import CartLayout from "./components/Cart Component/CartLayout";
+import Subscription from "./components/Subscription Component/Subscription";
 
 function App() {
   const addToCart = (item) => {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/home" element={<HomeLayout addToCart={addToCart} />} />
         <Route path="/admin" element={<AdminLayout />} />
         <Route path="/cart" element={<CartLayout />} />
+        <Route path="/MM-subscription" element={<Subscription />} />
       </Routes>
     </>
   );
