@@ -8,7 +8,7 @@ const Subscription = () => {
         <NavbarLayout />
       </div>
       <div className="container-fluid d-flex justify-content-end align-items-end mt-5">
-        <button class="button btn btn-danger mt-5 text-center shake sticky">
+        <button class="button btns btn btn-danger mt-5 text-center shake sticky">
           Get pro now 💵
         </button>
       </div>
