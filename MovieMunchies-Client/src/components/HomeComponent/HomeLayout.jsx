@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import CartLayout from "../Cart Component/CartLayout";
 import NavbarLayout from "../Navbar Component/NavbarLayout";
 import "./Home.css";
 import { useNavigate } from "react-router";
@@ -26,11 +26,16 @@ const HomeLayout = ({ addToCart, prices }) => {
       [foodItem]: prevCounts[foodItem] + 1,
     }));
     setCartCount((prevCount) => prevCount + 1);
-    addToCart({
-      name: foodItem,
-      image: `${foodItem}.jpg`,
-      price: itemCounts[foodItem] * prices[foodItem],
-    });
+    const count = itemCounts[foodItem] + 1; // Update count
+    const price = prices[foodItem] * count; // Calculate price
+    addToCart(
+      {
+        name: foodItem,
+        image: `${foodItem}.jpg`,
+        price: price,
+      },
+      count
+    ); // Pass both item and count to addToCart
   };
   return (
     <div>
