@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import NavbarLayout from "../Navbar Component/NavbarLayout";
 import "./Home.css";
 import { useNavigate } from "react-router";
-const HomeLayout = ({ addToCart }) => {
+const HomeLayout = ({ addToCart, prices }) => {
   const navigate = useNavigate();
   const [cartCount, setCartCount] = useState(0);
   const [itemCounts, setItemCounts] = useState({
@@ -26,7 +26,11 @@ const HomeLayout = ({ addToCart }) => {
       [foodItem]: prevCounts[foodItem] + 1,
     }));
     setCartCount((prevCount) => prevCount + 1);
-    addToCart(foodItem);
+    addToCart({
+      name: foodItem,
+      image: `${foodItem}.jpg`,
+      price: itemCounts[foodItem] * prices[foodItem],
+    });
   };
   return (
     <div>
