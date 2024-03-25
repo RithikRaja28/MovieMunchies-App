@@ -1,7 +1,6 @@
 import React from "react";
 import NavbarLayout from "../Navbar Component/NavbarLayout";
 import "./Cart.css";
-
 const CartLayout = ({ cartItems, removeItem }) => {
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
