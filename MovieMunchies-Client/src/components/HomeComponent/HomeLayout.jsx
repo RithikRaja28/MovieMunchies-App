@@ -94,7 +94,7 @@ const HomeLayout = ({ addToCart, prices }) => {
           >
       <div className="container-fluid">
         <div class="row">
-          <h6 className="text-light mb-3 mt-3 h6">Recommed Food 🍿: </h6>
+          <h6 className="text-light mb-3 mt-3 h6">Recommended Food 🍿: </h6>
          
             <div class="col-sm-3">
               <div class="card text-light text-center">

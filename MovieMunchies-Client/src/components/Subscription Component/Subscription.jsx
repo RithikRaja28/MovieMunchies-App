@@ -237,7 +237,6 @@ const Subscription = () => {
           iteration="1"
           fillMode="none"
         >
-          React-Moving-Text
           <div class="pack-container m-2">
             <div class="header">
               <p class="title">Entertainment Pro</p>
