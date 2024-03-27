@@ -10,7 +10,10 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/", { email, password })
+      .post(
+        "https://movie-munchies-admin-rithik-raja-ss-projects.vercel.app/",
+        { email, password }
+      )
       .then((result) => {
         console.log(result);
         navigate("/MM-login");
