@@ -4,13 +4,13 @@ const cors = require("cors");
 const AdminModel = require("./models/Admin.js");
 const app = express();
 app.use(express.json());
-app.use(cors(
-  {
-    origin:[""],
-    methods:["POST","GET"],
-    credentials:true
-  }
-));
+app.use(
+  cors({
+    origin: [""],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 mongoose.connect(
   "mongodb+srv://rithikraja28rr:pf17ycJzenwqGM2c@admin.gqu1c.mongodb.net/MMAdmin",
@@ -30,6 +30,9 @@ app.post("/MM-login", (req, res) => {
       res.json({ success: false, message: "No User Found" });
     }
   });
+});
+app.get("/",(req, res)=>{
+  res.json("hello");
 });
 
 app.post("/", (req, res) => {
