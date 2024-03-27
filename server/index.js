@@ -6,7 +6,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://127.0.0.1:27017/MMAdmin");
+mongoose.connect(
+  "mongodb+srv://rithikraja28rr:pf17ycJzenwqGM2c@admin.gqu1c.mongodb.net/MMAdmin",
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 
 app.post("/MM-login", (req, res) => {
   const { email, password } = req.body;
