@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://movie-munchies.vercel.app/"],
+    origin: ["https://movie-munchies.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -31,7 +31,7 @@ app.post("/MM-login", (req, res) => {
     }
   });
 });
-app.get("/",(req, res)=>{
+app.get("/", (req, res) => {
   res.json("hello");
 });
 
