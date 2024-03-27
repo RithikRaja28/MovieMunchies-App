@@ -37,6 +37,7 @@ const Signup = () => {
                   aria-describedby="emailHelp"
                   placeholder="Enter email"
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
                 <small id="emailHelp" className="form-text text-muted">
                   We'll never share your email with anyone else.
@@ -50,6 +51,7 @@ const Signup = () => {
                   id="exampleInputPassword1"
                   placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}
+                  required
                 />
               </div>
 

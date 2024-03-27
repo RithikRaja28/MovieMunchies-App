@@ -49,6 +49,7 @@ const LoginLayout = () => {
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
+              required
             />
             <input
               class="form-content"
@@ -57,6 +58,7 @@ const LoginLayout = () => {
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
+              required
             />
             <button type="submit" className="btn mt-2">
               Login
