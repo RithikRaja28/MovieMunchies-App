@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const AdminModel = require("./models/Admin.js");
-const { MONGO_URL } = require("./env.js");
+const {MONGO_URL} = require("./env.js");
 const app = express();
 app.use(express.json());
 app.use(
@@ -13,15 +13,11 @@ app.use(
   })
 );
 
-mongoose
-  .connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log("MongoDB connected successfully");
-  })
-  .catch((error) => {
-    console.error("MongoDB connection error:", error);
-  });
-  
+mongoose.connect(
+  MONGO_URL,
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
+
 app.post("/MM-login", (req, res) => {
   const { email, password } = req.body;
   AdminModel.findOne({ email: email }).then((user) => {
