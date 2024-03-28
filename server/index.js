@@ -3,21 +3,19 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const AdminModel = require("./models/Admin.js");
 const { MONGO_URL } = require("./env.js");
-
 const app = express();
 app.use(express.json());
+
+// Configure CORS
 app.use(
   cors({
-    origin: "https://movie-munchies.vercel.app/",
+    origin: "https://movie-munchies.vercel.app",
     methods: ["POST", "GET"],
     credentials: true,
   })
 );
 
-mongoose.connect(MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(MONGO_URL);
 
 app.post("/MM-login", (req, res) => {
   const { email, password } = req.body;
@@ -33,6 +31,7 @@ app.post("/MM-login", (req, res) => {
     }
   });
 });
+
 app.get("/", (req, res) => {
   res.json("hello");
 });
