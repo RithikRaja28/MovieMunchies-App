@@ -9,7 +9,7 @@ app.use(express.json());
 // Configure CORS
 app.use(
   cors({
-    origin: "https://movie-munchies.vercel.app",
+    origin: ["https://movie-munchies.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true,
   })
