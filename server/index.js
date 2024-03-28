@@ -2,20 +2,22 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const AdminModel = require("./models/Admin.js");
-const { MONGO_URL } = require("./env.js");
+
 const app = express();
 app.use(express.json());
 
 // Configure CORS
 app.use(
   cors({
-    origin: ["https://movie-munchies.vercel.app/"],
+    origin: ["https://movie-munchies.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
 );
 
-mongoose.connect(MONGO_URL);
+mongoose.connect(
+  "mongodb+srv://rithikraja28rr:pf17ycJzenwqGM2c@admin.gqu1c.mongodb.net/MMAdmin?retryWrites=true&w=majority&appName=Admin"
+);
 
 app.post("/MM-login", (req, res) => {
   const { email, password } = req.body;
@@ -33,7 +35,7 @@ app.post("/MM-login", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.json("hello");
+  res.json("Server Working");
 });
 
 app.post("/", (req, res) => {
