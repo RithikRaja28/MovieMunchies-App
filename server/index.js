@@ -12,6 +12,7 @@ app.use(
     origin: ["https://movie-munchies.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
