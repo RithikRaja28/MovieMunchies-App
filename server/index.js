@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const AdminModel = require("./models/Admin.js");
-
+const dontenv = require("dotenv");
 const app = express();
 app.use(express.json());
 
@@ -15,9 +15,9 @@ app.use(
   })
 );
 
-mongoose.connect(
-  "mongodb+srv://rithikraja28rr:pf17ycJzenwqGM2c@admin.gqu1c.mongodb.net/MMAdmin?retryWrites=true&w=majority&appName=Admin"
-);
+dontenv.config();
+
+mongoose.connect(process.env.MONGODB_URL);
 
 app.post("/MM-login", (req, res) => {
   const { email, password } = req.body;
