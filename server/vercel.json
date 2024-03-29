@@ -1,12 +1,13 @@
 {
-    "version":2,
-    "builds":[
-        {"src":"*.js","use":"@vercel/node"}
-    ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"/"
-        }
-    ]
+  "version": 2,
+  "builds": [{ "src": "*.js", "use": "@vercel/node" }],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/MM-login", "dest": "/MM-login" },
+    { "src": "/home", "dest": "/" },
+    { "src": "/admin", "dest": "/" },
+    { "src": "/cart", "dest": "/" },
+    { "src": "/MM-subscription", "dest": "/" },
+    { "src": "/(.*)", "dest": "/" }
+  ]
 }
