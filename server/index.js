@@ -1,8 +1,8 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const AdminModel = require("./models/Admin.js");
-const dontenv = require("dotenv");
 const app = express();
 app.use(express.json());
 
@@ -15,9 +15,15 @@ app.use(
   })
 );
 
-dontenv.config();
+dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URL);
+mongoose
+  .connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 app.post("/MM-login", (req, res) => {
   const { email, password } = req.body;
@@ -50,6 +56,7 @@ app.post("/", (req, res) => {
     });
 });
 
-app.listen(3001, () => {
-  console.log("Server is running");
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
