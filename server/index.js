@@ -28,17 +28,24 @@ mongoose
 
 app.post("/MM-login", (req, res) => {
   const { email, password } = req.body;
-  AdminModel.findOne({ email: email }).then((user) => {
-    if (user) {
-      if (user.password === password) {
-        res.json({ success: true, message: "Login Successful - Valid user" });
+  AdminModel.findOne({ email: email })
+    .then((user) => {
+      if (user) {
+        if (user.password === password) {
+          res.json({ success: true, message: "Login Successful - Valid user" });
+        } else {
+          res.json({ success: false, message: "Invalid email or password" });
+        }
       } else {
-        res.json({ success: false, message: "Invalid email or password" });
+        res.json({ success: false, message: "No User Found" });
       }
-    } else {
-      res.json({ success: false, message: "No User Found" });
-    }
-  });
+    })
+    .catch((err) => {
+      console.error("Error during login:", err);
+      res
+        .status(500)
+        .json({ success: false, message: "An error occurred during login" });
+    });
 });
 
 app.get("/", (req, res) => {
@@ -52,8 +59,8 @@ app.post("/", (req, res) => {
       res.json(admin);
     })
     .catch((err) => {
-      console.log("Error creating admin: ", err);
-      res.json(err);
+      console.error("Error creating admin: ", err);
+      res.status(500).json(err);
     });
 });
 
