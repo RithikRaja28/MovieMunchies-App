@@ -9,10 +9,10 @@ const LoginLayout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "https://movie-munchies-admin-rithik-raja-ss-projects.vercel.app/MM-login",
-        { email, password }
-      )
+      .post("https://movie-munchies-admin-ten.vercel.app/MM-login", {
+        email,
+        password,
+      })
       .then((result) => {
         console.log(result);
         if (result.data.success) {
