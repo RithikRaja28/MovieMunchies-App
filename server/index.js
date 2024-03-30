@@ -48,9 +48,35 @@ app.post("/MM-login", (req, res) => {
     });
 });
 
-app.get("/", (req, res) => {
-  res.json("Server Working");
+// Add a new route to fetch admin data
+// Add this route to your existing Node.js server
+
+app.get("/adminData", (req, res) => {
+  // Assuming you have a model named OrderModel to handle orders
+  AdminModel.find({}, "email password")
+    .then(admins => {
+      // Fetch the count of orders made by each admin
+      const promises = admins.map(admin =>
+        OrderModel.countDocuments({ adminId: admin._id })
+          .then(count => ({ ...admin.toObject(), ordersMade: count }))
+      );
+      
+      Promise.all(promises)
+        .then(adminsWithOrders => {
+          res.json(adminsWithOrders);
+        })
+        .catch(err => {
+          console.error("Error fetching admin data:", err);
+          res.status(500).json({ success: false, message: "An error occurred" });
+        });
+    })
+    .catch(err => {
+      console.error("Error fetching admins:", err);
+      res.status(500).json({ success: false, message: "An error occurred" });
+    });
 });
+
+
 
 app.post("/", (req, res) => {
   AdminModel.create(req.body)
