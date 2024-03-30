@@ -48,32 +48,9 @@ app.post("/MM-login", (req, res) => {
     });
 });
 
-app.get("/adminData", (req, res) => {
-  // Assuming you have a model named OrderModel to handle orders
-  AdminModel.find({}, "email password")
-    .then(admins => {
-      // For simplicity, assuming you have an array of orders in each admin document
-      const promises = admins.map(admin =>
-        OrderModel.countDocuments({ adminId: admin._id })
-          .then(count => ({ email: admin.email, password: admin.password, ordersMade: count }))
-      );
-      
-      Promise.all(promises)
-        .then(adminsWithOrders => {
-          res.json(adminsWithOrders);
-        })
-        .catch(err => {
-          console.error("Error fetching admin data:", err);
-          res.status(500).json({ success: false, message: "An error occurred" });
-        });
-    })
-    .catch(err => {
-      console.error("Error fetching admins:", err);
-      res.status(500).json({ success: false, message: "An error occurred" });
-    });
+app.get("/", (req, res) => {
+  res.json("Server Working");
 });
-
-
 
 app.post("/", (req, res) => {
   AdminModel.create(req.body)
