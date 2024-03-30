@@ -29,29 +29,29 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script>
-    // Function to fetch admin data and populate the table
-    function fetchAdminData() {
-      $.get("/adminData", function(data) {
-        // Clear previous data
-        $("#adminTableBody").empty();
+  // Function to fetch admin data and populate the table
+  function fetchAdminData() {
+    $.get("/adminData", function(data) {
+      // Clear previous data
+      $("#adminTableBody").empty();
 
-        // Loop through the data and append to the table
-        data.forEach(function(admin) {
-          $("#adminTableBody").append(`
-            <tr>
-              <td>${admin.email}</td>
-              <td>${admin.password}</td>
-              <td>${admin.ordersMade}</td>
-            </tr>
-          `);
-        });
+      // Loop through the data and append to the table
+      data.forEach(function(admin) {
+        $("#adminTableBody").append(`
+          <tr>
+            <td>${admin.email}</td>
+            <td>${admin.password}</td>
+            <td>${admin.ordersMade}</td>
+          </tr>
+        `);
       });
-    }
-
-    // Fetch admin data when the page loads
-    $(document).ready(function() {
-      fetchAdminData();
     });
-  </script>
+  }
+
+  // Fetch admin data when the page loads
+  $(document).ready(function() {
+    fetchAdminData();
+  });
+</script>
 </body>
 </html>

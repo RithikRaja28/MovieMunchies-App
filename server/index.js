@@ -48,17 +48,14 @@ app.post("/MM-login", (req, res) => {
     });
 });
 
-// Add a new route to fetch admin data
-// Add this route to your existing Node.js server
-
 app.get("/adminData", (req, res) => {
   // Assuming you have a model named OrderModel to handle orders
   AdminModel.find({}, "email password")
     .then(admins => {
-      // Fetch the count of orders made by each admin
+      // For simplicity, assuming you have an array of orders in each admin document
       const promises = admins.map(admin =>
         OrderModel.countDocuments({ adminId: admin._id })
-          .then(count => ({ ...admin.toObject(), ordersMade: count }))
+          .then(count => ({ email: admin.email, password: admin.password, ordersMade: count }))
       );
       
       Promise.all(promises)
