@@ -49,7 +49,7 @@ app.post("/MM-login", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.json("Server Working");
+  res.json("Server Working !!");
 });
 
 app.post("/", (req, res) => {
