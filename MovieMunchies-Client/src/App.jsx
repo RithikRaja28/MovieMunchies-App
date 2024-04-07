@@ -34,15 +34,15 @@ const addToCart = (item) => {
   );
 
   if (existingItemIndex !== -1) {
-    // Item already exists in cart, update count
+   
     const updatedCartItems = [...cartItems];
     updatedCartItems[existingItemIndex].count += 1;
     updatedCartItems[existingItemIndex].price =
-      updatedCartItems[existingItemIndex].count + item.price; // Update price based on new count
+      updatedCartItems[existingItemIndex].count + item.price; 
     setCartItems(updatedCartItems);
   } else {
-    // Item doesn't exist in cart, add it
-    const newItem = { ...item, count: 1, price: item.price }; // Initialize count to 1 and calculate initial price
+   
+    const newItem = { ...item, count: 1, price: item.price }; 
     setCartItems((prevItems) => [...prevItems, newItem]);
     console.log(
       "Adding Food item: ",
