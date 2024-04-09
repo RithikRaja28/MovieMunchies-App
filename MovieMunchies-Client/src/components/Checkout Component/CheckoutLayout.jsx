@@ -9,7 +9,7 @@ const CheckoutLayout = () => {
       </header>
       <div className="container text-light">
         <div className="row">
-          <div className="col m-4">
+          <div className="col m-3">
             <h3 className="h3 mb-3">Checkout</h3>
             <div class="accordion accordion-flush" id="accordionFlushExample">
               <div class="accordion-item">
@@ -134,14 +134,55 @@ const CheckoutLayout = () => {
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div class="accordion-body text-light">
-                    
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="inlineCheckbox1"
+                        className="ms-2"
+                      >
+                        <img
+                          src="/Payment icons/paypal.png"
+                          alt=""
+                          className=""
+                          width={40}
+                        />
+                        <span className="ms-2">Pay with PayPal</span>
+                      </label>
+                    </div>
+                    <hr />
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="inlineCheckbox1"
+                        className="ms-2"
+                      >
+                        <img
+                          src="/Payment icons/credit-card.png"
+                          alt=""
+                          width={35}
+                        />
+                        <span className="ms-2">Credit Card / Debit Card</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col">
-            <h2>Test</h2>
+          <div className="col m-3">
+            <h2>Order Summary</h2>
           </div>
         </div>
       </div>
