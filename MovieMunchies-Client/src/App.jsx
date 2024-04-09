@@ -9,6 +9,7 @@ import AdminLayout from "./components/Adminpage Component/AdminLayout";
 import Signup from "./Signup";
 import CartLayout from "./components/Cart Component/CartLayout";
 import Subscription from "./components/Subscription Component/Subscription";
+import CheckoutLayout from "./components/Checkout Component/CheckoutLayout";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -73,6 +74,7 @@ const addToCart = (item) => {
           element={<CartLayout cartItems={cartItems} removeItem={removeItem} />}
         />
         <Route path="/MM-subscription" element={<Subscription />} />
+        <Route path="/checkout" element={<CheckoutLayout />} />
       </Routes>
     </>
   );
