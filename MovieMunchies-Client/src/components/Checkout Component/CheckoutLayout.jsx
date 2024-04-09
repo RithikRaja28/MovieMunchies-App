@@ -71,7 +71,7 @@ const CheckoutLayout = () => {
                   </div>
                 </div>
               </div>
-              <div class="accordion-item mt-2">
+              <div class="accordion-item mt-3">
                 <h2 class="accordion-header">
                   <button
                     class="accordion-button collapsed"
@@ -112,6 +112,29 @@ const CheckoutLayout = () => {
                         placeholder="Your seat number"
                       />
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mt-3">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Payment Method
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-light">
+                    
                   </div>
                 </div>
               </div>
