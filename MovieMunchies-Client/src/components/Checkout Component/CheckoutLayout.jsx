@@ -237,8 +237,8 @@ const CheckoutLayout = () => {
             <hr />
             {cartItems.map((item, index) => (
               <div key={index}>
-                <p>
-                  {item.name}: ₹ {item.price} <br />
+                <p className="p-2">
+                  {item.name.toUpperCase()}: ₹ {item.price} <br />
                   Quantity (in nos): {item.count}
                 </p>
               </div>
@@ -247,7 +247,7 @@ const CheckoutLayout = () => {
               <p className="m-2">Total Price: ₹ {totalPrice}</p>
             </div>
             <div className="text-center">
-              <button className="btn btn-success mt-2">Confirm Order</button>
+              <button className="btn btn-success mt-2">Confirm Order 🍿</button>
             </div>
           </div>
         </div>

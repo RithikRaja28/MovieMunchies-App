@@ -6,8 +6,16 @@ const CartLayout = ({ cartItems, removeItem }) => {
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
   const navigate = useNavigate();
    const placeOrder = () => {
-     console.log("CartItems in CartLayout:", cartItems);
-     navigate("/checkout", { state: { cartItems } });
+     if(cartItems.length === 0)
+     {
+      alert(
+        "Your cart is empty. Please add some items. \nStay Healthy 🍿 \n\n\t\t -MovieMunchies"
+      );
+     }
+     else{
+      navigate("/checkout", { state: { cartItems } });
+     }
+     
    };
   return (
     <div>
