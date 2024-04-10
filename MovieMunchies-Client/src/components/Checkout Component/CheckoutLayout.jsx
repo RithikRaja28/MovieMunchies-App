@@ -1,7 +1,16 @@
 import React from "react";
 import NavbarLayout from "../Navbar Component/NavbarLayout";
 import "./Checkout.css";
+import { useLocation } from "react-router-dom";
 const CheckoutLayout = () => {
+  const location = useLocation();
+  const { state } = location;
+
+  const cartItems = state && state.cartItems ? state.cartItems : [];
+
+  const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+
+  console.log("CartItems in CheckoutLayout:", cartItems);
   return (
     <div>
       <header>
@@ -221,11 +230,25 @@ const CheckoutLayout = () => {
               <code>Enjoy your food !!</code>
             </div>
           </div>
-          
+
           <div className="col m-3">
             <hr />
             <h4 className="h4">Order Summary :</h4>
             <hr />
+            {cartItems.map((item, index) => (
+              <div key={index}>
+                <p>
+                  {item.name}: ₹ {item.price} <br />
+                  Quantity (in nos): {item.count}
+                </p>
+              </div>
+            ))}
+            <div className="d-flex mt-5">
+              <p className="m-2">Total Price: ₹ {totalPrice}</p>
+            </div>
+            <div className="text-center">
+              <button className="btn btn-success mt-2">Confirm Order</button>
+            </div>
           </div>
         </div>
       </div>

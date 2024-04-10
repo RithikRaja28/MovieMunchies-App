@@ -74,7 +74,10 @@ const addToCart = (item) => {
           element={<CartLayout cartItems={cartItems} removeItem={removeItem} />}
         />
         <Route path="/MM-subscription" element={<Subscription />} />
-        <Route path="/checkout" element={<CheckoutLayout />} />
+        <Route
+          path="/checkout"
+          element={<CheckoutLayout cartItems={cartItems} />}
+        />
       </Routes>
     </>
   );

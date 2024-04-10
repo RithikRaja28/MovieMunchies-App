@@ -1,9 +1,14 @@
 import React from "react";
 import NavbarLayout from "../Navbar Component/NavbarLayout";
 import "./Cart.css";
+import { useNavigate } from "react-router";
 const CartLayout = ({ cartItems, removeItem }) => {
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
-
+  const navigate = useNavigate();
+   const placeOrder = () => {
+     console.log("CartItems in CartLayout:", cartItems);
+     navigate("/checkout", { state: { cartItems } });
+   };
   return (
     <div>
       <div className="container-fluid m-2">
@@ -43,7 +48,7 @@ const CartLayout = ({ cartItems, removeItem }) => {
               <div className="card-body">
                 <h5 className="card-title m-2">Total</h5>
                 <p className="card-text mt-3">Total Price: {totalPrice} </p>
-                <button className="btn btn-success">Place Order</button>
+                <button className="btn btn-success" onClick={placeOrder}>Place Order</button>
               </div>
             </div>
           </div>
