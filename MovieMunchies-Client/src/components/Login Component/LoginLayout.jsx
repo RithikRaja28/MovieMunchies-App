@@ -3,7 +3,10 @@ import { useNavigate } from "react-router";
 import "./Login.css";
 import axios from "axios";
 import MovingComponent from "react-moving-text";
+ import { ToastContainer, toast } from "react-toastify";
+ import "react-toastify/dist/ReactToastify.css";
 const LoginLayout = () => {
+   const notify = () => toast("Logged in Successfully !");
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const handleSubmit = (e) => {
@@ -17,6 +20,7 @@ const LoginLayout = () => {
         console.log(result);
         if (result.data.success) {
           alert(result.data.message);
+          <ToastContainer />;
           navigate("/home");
         } else {
           alert(result.data.message);
