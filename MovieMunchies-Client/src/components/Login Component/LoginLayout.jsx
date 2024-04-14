@@ -69,6 +69,7 @@ const LoginLayout = () => {
             <button type="submit" className="btn mt-2">
               Login
             </button>
+            
           </form>
 
           <div id="rays">
@@ -336,6 +337,7 @@ const LoginLayout = () => {
               </defs>
             </svg>
           </div>
+          
         </div>
       </MovingComponent>
     </div>
