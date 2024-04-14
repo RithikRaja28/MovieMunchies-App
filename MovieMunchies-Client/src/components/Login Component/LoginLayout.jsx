@@ -67,7 +67,7 @@ const LoginLayout = () => {
               }}
               required
             />
-            <button type="submit" className="btn mt-2">
+            <button type="submit"  onClick={notify} className="btn mt-2">
               Login
             </button>
           </form>
