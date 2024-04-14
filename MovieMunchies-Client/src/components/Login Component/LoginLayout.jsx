@@ -3,12 +3,11 @@ import { useNavigate } from "react-router";
 import "./Login.css";
 import axios from "axios";
 import MovingComponent from "react-moving-text";
- import { ToastContainer, toast } from "react-toastify";
- import "react-toastify/dist/ReactToastify.css";
 const LoginLayout = () => {
-   const notify = () => toast("Logged in Successfully !");
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -20,7 +19,7 @@ const LoginLayout = () => {
         console.log(result);
         if (result.data.success) {
           alert(result.data.message);
-          <ToastContainer />;
+          
           navigate("/home");
         } else {
           alert(result.data.message);
@@ -67,7 +66,7 @@ const LoginLayout = () => {
               }}
               required
             />
-            <button type="submit"  onClick={notify} className="btn mt-2">
+            <button type="submit" className="btn mt-2">
               Login
             </button>
           </form>
