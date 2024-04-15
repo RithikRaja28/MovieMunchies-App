@@ -7,6 +7,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const [name, setName] = useState();
   const [email, setEmail] = useState();
+  const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,6 +57,20 @@ const Signup = () => {
                   <small id="emailHelp" className="form-text text-light">
                     We'll never share your email with anyone else.
                   </small>
+                </div>
+                <div className="form-group m-3">
+                  <label for="exampleInputEmail1">Username</label>
+
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter username"
+                    onChange={(e) => setUsername(e.target.value)}
+                    required
+                  />
+                  
                 </div>
                 <div className="form-group m-3">
                   <label for="exampleInputPassword1">Password</label>

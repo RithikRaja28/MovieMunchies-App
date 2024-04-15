@@ -6,6 +6,7 @@ import MovingComponent from "react-moving-text";
 const LoginLayout = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [username, setUsername] = useState();
 
 
   const handleSubmit = (e) => {
@@ -54,6 +55,15 @@ const LoginLayout = () => {
               placeholder="Email"
               onChange={(e) => {
                 setEmail(e.target.value);
+              }}
+              required
+            />
+            <input
+              class="form-content text-dark"
+              type="text"
+              placeholder="Username"
+              onChange={(e) => {
+                setUsername(e.target.value);
               }}
               required
             />
