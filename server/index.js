@@ -27,11 +27,11 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 app.post("/MM-login", (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, username } = req.body;
   AdminModel.findOne({ email: email })
     .then((user) => {
       if (user) {
-        if (user.password === password) {
+        if (user.password === password && user.username === username) {
           res.json({ success: true, message: "Login Successful - Valid user" });
         } else {
           res.json({ success: false, message: "Invalid email or password" });

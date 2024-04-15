@@ -15,6 +15,7 @@ const LoginLayout = () => {
       .post("https://movie-munchies-admin-ten.vercel.app/MM-login", {
         email,
         password,
+        username
       })
       .then((result) => {
         console.log(result);

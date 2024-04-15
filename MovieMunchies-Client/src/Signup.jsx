@@ -12,7 +12,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://movie-munchies-admin-ten.vercel.app/", { email, password })
+      .post("https://movie-munchies-admin-ten.vercel.app/", { email, password ,username})
       .then((result) => {
         console.log(result);
         navigate("/MM-login");
