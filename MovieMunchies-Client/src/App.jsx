@@ -10,7 +10,7 @@ import Signup from "./Signup";
 import CartLayout from "./components/Cart Component/CartLayout";
 import Subscription from "./components/Subscription Component/Subscription";
 import CheckoutLayout from "./components/Checkout Component/CheckoutLayout";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -60,6 +60,7 @@ const addToCart = (item) => {
 
   return (
     <>
+
       <PreLoaderComponent />
       <Routes>
         <Route path="/MM-login" element={<LoginLayout />} />
