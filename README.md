@@ -17,11 +17,11 @@ Welcome to **MovieMunchies 🍿** - revolutionizing your theatre experience by b
 
 **MovieMunchies** is a web application designed to enhance your movie-going experience. By integrating directly with theatre seats, this application allows users to:
 
-- Authenticate through a secure login and signup system.
-- Browse a comprehensive list of available food items.
-- Add their preferred items to a cart.
-- Review their cart and the total amount.
-- Checkout effortlessly without leaving their seat.
+-🔒 Authenticate through a secure login and signup system.
+-🍉 Browse a comprehensive list of available food items.
+-🛒 Add their preferred items to a cart.
+-👁️ Review their cart and the total amount.
+-💵 Checkout effortlessly without leaving their seat.
 
 ## Features
 
